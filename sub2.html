@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>~에 오신 것을 환영합니다.</title>
+    <meta name="Subject" content="홈페이지 주제 하이바" />
+    <meta name="title" content="홈페이지 이름 하이바" />
+    <meta name="Descript-xion" content="설명문 " />
+    <meta name="author" content="만든사람 김영호" />
+    <meta name="Keywords" content="헬멧 장갑 오토바이 부츠 여름 오도바이 하이바 " />
+    <!-- iPhone의 반사광 효과가 없는 경우 -->
+    <link href="h1.png" rel="apple-touch-icon-precomposed" />
+    <!-- iPhone의 반사광이 있는 경우 -->
+    <link href="h2.png" rel="apple-touch-icon" />
+    <!-- iPhone icon(Retina) -->
+    <link href="h3.png" sizes="114x114" rel="apple-touch-icon" />
+    <!-- iPad icon(Retina) -->
+    <link href="h3.png" sizes="144x144" rel="apple-touch-icon" />
+    <!-- Android png의 경우 -->
+    <link href="favicon.png" rel="shortcut icon" />
+    <!-- Android ico의 경우 -->
+    <link href="favicon.ico" rel="shortcut icon" /> <!-- 또는 -->
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    
+    <script type="text/javascript">
+    <!--
+    // 주소창 자동 닫힘
+    window. addEventListener ("load", function(){
+        setTimeout (loaded, 100) ;
+    }, false);
+        
+    function loaded(){
+        window.scrollTo(0, 1); /* 0과 1은 x, y 축 *?
+    }
+    //-->
+    </script>
+    <style>
+        * { margin: 0; padding: 0; }
+        body, html { width: 100%; height: 100%; overflow: hidden;}
+        a { text-decoration: none; }
+        img { border: none; }
+        ul { list-style: none; }
+        p { line-height: 1.3; padding: 10px; }
+        h2 { text-align: center; line-height: 2; }
+        
+        .wrsp { clear: both; width: 100%; }
+        #hd { clear: both; width: 100%; }
+        .hdbar { width: 100%; height: 100px; background: #fff1d5; position: relative; }
+        .home, .collap { position: absolute; width: 62px; height: 36px; z-index: 10; display: block;  top: 32px; text-indent: -9999px; }
+        .hdbar a, label { color: #333; z-index: 10000;  }
+        .hdbar label { background-image: url("./img/search.png"); }
+        .hdbar a { background-image: url("./img/home.png"); }
+        .home { left: 10px; background-position: 0px 0px ; }
+        .collap { right: 10px; background-position: -62px 0px ;}
+        .title { color: #333; text-shadow: 2px 2px 2px #333; text-align: center;  font-size: 35px; padding-top: 12px; }
+        
+        .colItem li { width: 25%; height: 32px; line-height: 32px;  }
+        #collapMenu { height: 32px; border-bottom: 1px solid #333;  }
+        #collapMenu a { color: #3d3e43; display: block; text-align: center; line-height: 32px; font-size:0.85em;  }
+        
+        #collap_ck { display: none; }
+        #collap_ck:checked ~ #collapMenu{ display: block; }
+        
+        #visual { width: 100%; height: 250px; position: relative;}
+        #visual img { display: block; width: 100%; height: auto; }
+        .titleBox { position: absolute; z-index: 8; width: 100%; }
+        .banTitle { line-height: 120px; color:#fff; text-shadow: 0px 0px 2px #000; text-align: center; }
+        .more { display: block; width: 80px; height: 32px; line-height: 32; text-align: center; font-size: 14px; border-radius: 16px; clear: both; float: right; background: #fea513; margin-right: 100px; }
+        
+        .copyright { background: #fea513; clear: both; width: 100%; height: 60px; color:#fff; text-align: center; line-height: 60px; }
+        
+        #sideOpener { display: block; width: 32px; height: 32px; background-image: url(); border-radius: 19px; border: 3px solid #fea513; position: fixed; bottom: 100px; right: 50px; background-color: #fff; }
+        #side_ck:checked ~ #sideOpener { background-position: 0px -32px; }
+        #side_ck:checked ~ #sidebar { left: 0;  }
+        
+        
+        
+        .sideTitle { font-size: 1.12em; color: #fff; line-height: 48px;  } 
+        #lnb li a { display: block; line-height: 32px; font-size: 0.8em; text-indent: 15px;  }
+        .itemTitle, .itemTitle a { font-weight: bold; font-size: 0.85em; }
+        
+        #map_canvas { display: block; margin-bottom:40px; margin-left: 20px;}
+        #conta
+        #contact1 p { text-align:left;	padding-left:30px; line-height:30px; margin-top:25px;
+        padding-right:25px; }
+        
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+    <script> 
+    //좌표 값을 바꿔서 입력 36.3491563,127.3776857
+    function initialize() {
+      var myLatlng = new google.maps.LatLng(37.4354801,127.13577379999992);
+      var mapOptions = {
+        zoom: 17,
+        center: myLatlng
+      }
+      var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+      var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: '그린컴퓨터아트학원'	  //레이블을 바꿔서 입력
+      });
+    }
+
+
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+     </script>
+</head>
+<body onload="initialize()">
+    <div class="wrap">
+        <header id="hd"> 
+            <div class="hdbar">
+                <a href="index1.html" class="home">home</a>
+                <h2 class="title">BIKE MAX</h2>
+                <label for="" class="collap">collap</label>
+            </div>
+            <input type="checkbox" id="collap_ck">
+            <nav id="collapMenu" class="colItem">
+                <ul>
+                    <li><a href="login_form.php"></a></li>
+                    <li><a href="add_form.php"></a></li>
+                    <li><a href="mailto:rokaf9497@naver.com"></a></li>
+                    <li><a href="tel:010-3048-3420"></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </nav>
+            <nav id="gnb" class="colItem">
+                <ul>
+                    <li><a href="sub1.html">매장안내</a></li>
+                    <li><a href="sub2.hmtl">장바구니</a></li>
+                    <li><a href="sub3.html">주문조회</a></li>
+                    <li><a href="sub4.html">마이쇼핑</a></li>
+                    <li><a href="sub5.html">게시판</a></li>
+                </ul>
+            </nav>
+            <nav id="subItem">
+                <uil>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </uil>
+            </nav>
+        </header>
+        <div id="contents">
+            <figure id="visual">
+                <img src="" alt="" class="pageImg">
+                <div class="titleBox">
+                    <h3 class="banTitle"></h3>
+                    <a href="" class="more">MORE</a>
+                </div>
+            </figure>
+            <section id="page1">
+                <h2 class="pagetitle"></h2>
+                <p class="pageComent"></p>
+                <img src="" alt="">
+            </section>
+            <section id="page2">
+                <h2 class="pagetitle"></h2>
+                <p class="pageComent"></p>
+                <img src="" alt="">
+            </section>
+            <section id="page3">
+                <h2 class="pagetitle"></h2>
+                <p class="pageComent"></p>
+                <img src="" alt="">
+            </section>
+        </div>
+	</div>
+        <footer id="ft">
+            <h2 class="cop"></h2>
+        </footer>
+        <input type="checkbox" id="side_ck">
+        <label for="side_ck" id="sideOpener"></label>
+        <aside id="sidebar">
+           <h2 class="sideTitle"></h2>
+            <nav id="lnb">
+                <ul>
+                    <li class="itemTitle"></li>
+                    <li><a href="sub1.html#page1"></a></li>
+                    <li><a href="sub1.html#page2"></a></li>
+                    <li><a href="sub1.html#page3"></a></li>
+                    <li class="itemTitle">
+                        <a href="sub2.html"></a>
+                    </li>
+                    <li class="itemTitle"></li>
+                    <li><a href="sub3.html#page1"></a></li>
+                    <li><a href="sub3.html#page2"></a></li>
+                    <li>
+                        <a href="./board/list.php"></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebarBanner">
+                
+            </div>
+        </aside>
+</body>
+</html>
